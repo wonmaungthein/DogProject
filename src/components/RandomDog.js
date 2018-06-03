@@ -23,7 +23,7 @@ class RandomDog extends React.Component {
   };
 
   getNextImage = () => {
-    console.log("Let's get another img");
+    return this.componentDidMount();
   };
   render() {
     return (
