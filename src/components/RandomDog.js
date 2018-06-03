@@ -1,5 +1,6 @@
 import React from "react";
 import "./RandomDog.css";
+<<<<<<< HEAD
 
 fetch("https://dog.ceo/api/breeds/image/random")
   .then(data => data.json())
@@ -15,6 +16,9 @@ class RandomDog extends React.Component {
   getNextImage = () => {
     console.log("Let's get another img");
   };
+=======
+class RandomDog extends React.Component {
+>>>>>>> master
   render() {
     return (
       <div className="RandomDog">
@@ -24,12 +28,17 @@ class RandomDog extends React.Component {
           src="http://via.placeholder.com/300x300"
         />
         <p>
+<<<<<<< HEAD
           <button className="RandomDog-button" onClick={this.saveImage}>
             Save Image
           </button>
           <button className="RandomDog-button" onClick={this.getNextImage}>
             Next Dog
           </button>
+=======
+          <button className="RandomDog-button">Save Image</button>
+          <button className="RandomDog-button">Next Dog</button>
+>>>>>>> master
         </p>
       </div>
     );
