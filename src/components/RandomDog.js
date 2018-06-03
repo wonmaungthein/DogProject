@@ -5,7 +5,8 @@ class RandomDog extends React.Component {
   constructor() {
     super();
     this.state = {
-      randomDog: []
+      randomDog: [],
+      savedPhotos: []
     };
   }
 
@@ -19,7 +20,7 @@ class RandomDog extends React.Component {
   }
 
   saveImage = () => {
-    console.log("Save button is being clicked");
+    this.setState({ savedPhotos: this.state.randomDog });
   };
 
   getNextImage = () => {
