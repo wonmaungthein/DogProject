@@ -5,27 +5,28 @@ class RandomDog extends React.Component {
   constructor() {
     super();
     this.state = {
-      randomDog: [],
+      randomDog: "",
       savedPhotos: []
     };
-  }
-
-  componentDidMount() {
-    const randomDogLink = "https://dog.ceo/api/breeds/image/random";
-    fetch(randomDogLink)
-      .then(data => data.json())
-      .then(randompic => {
-        this.setState({ randomDog: randompic.message });
-      });
   }
 
   saveImage = () => {
     this.setState({ savedPhotos: this.state.randomDog });
   };
 
+  componentDidMount() {
+    this.getNextImage();
+  }
+
   getNextImage = () => {
-    return this.componentDidMount();
+    const randomDogLink = "https://dog.ceo/api/breeds/image/random";
+    fetch(randomDogLink)
+      .then(data => data.json())
+      .then(randompic => {
+        this.setState({ randomDog: randompic.message });
+      });
   };
+
   render() {
     return (
       <div className="RandomDog">
