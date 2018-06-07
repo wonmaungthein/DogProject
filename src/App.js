@@ -30,7 +30,6 @@ class App extends Component {
     //   savedPhotos: [firstDog, secondDog]
     this.setState({
       savedPhotos: this.state.savedPhotos
-
         .splice(0)
         .concat(randomDog)
         .reverse()
