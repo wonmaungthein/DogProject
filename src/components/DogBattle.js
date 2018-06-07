@@ -6,8 +6,8 @@ class DogBattle extends React.Component {
   constructor() {
     super();
     this.state = {
-      DogBattle: [],
-      DogBattle1: []
+      DogBattle: "",
+      DogBattle1: ""
     };
   }
 
