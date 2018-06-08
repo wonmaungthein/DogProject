@@ -13,8 +13,8 @@ class Favourites extends React.Component {
         <div className="Favourites-saved">
           <h2>Saved Photos</h2>
           <div className="Favourites-photos">
-            <img src="http://via.placeholder.com/80x80" />
-            <img src="http://via.placeholder.com/80x80" />
+            <img src={this.props.image1} height="150px" width="100px" />
+            <img src={this.props.image2} height="150px" width="100px" />
           </div>
         </div>
       </div>

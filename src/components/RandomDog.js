@@ -5,15 +5,13 @@ class RandomDog extends React.Component {
   constructor() {
     super();
     this.state = {
-      randomDog: "",
-      savedPhotos: []
+      randomDog: null
     };
   }
 
   saveImage = () => {
-    this.setState({ savedPhotos: this.state.randomDog });
+    this.props.dogSaved(this.state.randomDog);
   };
-
   componentDidMount() {
     this.getNextImage();
   }
